@@ -11,5 +11,8 @@
   "repository": {
     "type": "git",
     "url": "Gerador de senhas"
+  },
+  "dependencies": {
+    "nanoid": "^4.0.2"
   }
 }
