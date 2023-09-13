@@ -32,3 +32,19 @@ randomCatBtn.addEventListener('click',async (e) => {
     const cat_url_image = await getRandomCatImage();
     petImage.src = cat_url_image;
 })
+
+const getRandomNumber = () => {
+    return Math.floor(Math.random() * 2) + 1;
+}
+
+randomPetBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const randomNumber = getRandomNumber();
+    if(randomNumber === 1) {
+        const dog_url_image = await getRandomDogImage();
+        petImage.src = dog_url_image;
+    }else {
+        const cat_url_image = await getRandomCatImage();
+        petImage.src = cat_url_image;
+    }
+})
