@@ -7,7 +7,7 @@ btn.addEventListener('click', () => {
     if(options.value === 'Email' && validator.isEmail(email.value)){
         console.log('true');
         text.innerHTML = 'A validação retornou true'
-    }else if(options.value === 'CPF' && !isNaN(email.value)){
+    }else if(options.value === 'CPF' && !isNaN(email.value) && email.value.length === 11 ){
         text.innerHTML = 'A validação retornou true'
     }else {
         console.log('false')
