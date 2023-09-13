@@ -7,9 +7,11 @@ btn.addEventListener('click', () => {
     if(options.value === 'Email' && validator.isEmail(email.value)){
         console.log('true');
         text.innerHTML = 'A validação retornou true'
-    }else if(options.value === 'CPF' && !isNaN(email.value) && email.value.length === 11 ){
+    }
+    else if(options.value === 'CPF' && validator.isTaxID(email.value, 'pt-BR')) {
         text.innerHTML = 'A validação retornou true'
-    }else {
+    }
+    else {
         console.log('false')
         text.innerHTML = 'A validação retornou false'
     }
