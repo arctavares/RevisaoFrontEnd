@@ -19,8 +19,12 @@ const randomInt = () => Math.floor(Math.random() * SuperHerosLength) + 1;
 
 const getSuperHeroInfoById = async (id) => {
     const response = await fetch(INFO_BY_ID(id))
-    const data = await response.json();
-    return data;
+    const data = response.json();
+    if(response.ok) {
+        return data
+    }else {
+        alert('Heroi não encontrado - Tente novamente')
+    }
 }
 
 sortBtn.addEventListener('click', async (e) => {
