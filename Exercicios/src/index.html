@@ -9,16 +9,20 @@
     <main>
         <h1>Validador de campos</h1>
         <form>
-            <input type="email" placeholder="Email" id="Email"/>
-            <input type="number" placeholder="CPF" id="CPF" />
-            <button type="button">
+            <input type="email" placeholder="Email" id="Email" class="Email"/>
+            <select id="options" name="options" class="options" value="CPF">
+                <option value="CPF">CPF</option>
+                <option value="Email">Email</option>
+            </select>
+            <button type="button" class="btn">
                 Validar
             </button>
         </form>
-        <p>
+        <p id="Text">
             Digite o valor, escolha a opção e clique em validar
         </p>
     </main>
     <script src="/src/main.js" type="module"></script>
+    <script src="/node_modules/validator/validator.js"></script>
 </body>
 </html>

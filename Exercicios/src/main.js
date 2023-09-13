@@ -1,5 +1,16 @@
-import validator from "../node_modules/validator/validator";
+const email = document.querySelector('#Email');
+const options = document.querySelector('.options');
+const btn = document.querySelector('.btn');
+const text = document.querySelector('#Text')
 
-const email = document.querySelector('#email');
-console.log(email);
-console.log(validator.isEmail('email@email.com'))
+btn.addEventListener('click', () => {
+    if(options.value === 'Email' && validator.isEmail(email.value)){
+        console.log('true');
+        text.innerHTML = 'A validação retornou true'
+    }else if(options.value === 'CPF' && !isNaN(email.value)){
+        text.innerHTML = 'A validação retornou true'
+    }else {
+        console.log('false')
+        text.innerHTML = 'A validação retornou false'
+    }
+})
